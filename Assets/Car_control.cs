@@ -57,7 +57,7 @@ public class Car_control : MonoBehaviour
         steering = turnInputCurve.Evaluate(in_data.steer) * max_turn_angle; 
 
         drift = in_data.drifting && rb.velocity.sqrMagnitude > 100;
-
+        /*
         if ( drift && allowDrift )
         {
             Vector3 driftForce = -transform.right;
@@ -73,7 +73,7 @@ public class Car_control : MonoBehaviour
             rb.AddForce(driftForce * driftIntensity, ForceMode.Force);
             rb.AddTorque(driftTorque * driftIntensity, ForceMode.VelocityChange);
         }
-
+        */
         // Downforce
        // rb.AddForce(-transform.up * speed * downforce);
     }
